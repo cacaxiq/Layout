@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<AbsoluteLayout
+    x:Class="Layout.ButtonBadge"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Button
+        x:Name="button"
+        AbsoluteLayout.LayoutBounds=".5,.5, 1, 1"
+        AbsoluteLayout.LayoutFlags="All"
+        BackgroundColor="#3b5998"
+        BorderRadius="0"
+        Image="feed.png" />
+
+    <Frame
+        x:Name="frame"
+        Padding="3,0"
+        AbsoluteLayout.LayoutBounds=".9,0.1, 0.5,0.5"
+        AbsoluteLayout.LayoutFlags="All"
+        BackgroundColor="#da2929"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+        <Label
+            x:Name="badge"
+            Margin="0"
+            HorizontalTextAlignment="Center"
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+    </Frame>
+</AbsoluteLayout>

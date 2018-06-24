@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Layout.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:local="clr-namespace:Layout"
+    BackgroundColor="#dddfe2">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="style" TargetType="StackLayout">
+                <Setter Property="Orientation" Value="Horizontal" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="Padding" Value="5,1" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ListView>
+            <ListView.Header>
+                <StackLayout Spacing="10">
+                    <StackLayout Orientation="Horizontal" Spacing="0">
+                        <local:ButtonBadge IsSelected="true" />
+                        <local:ButtonBadge />
+                        <local:ButtonBadge />
+                        <local:ButtonBadge Badge="50" />
+                        <local:ButtonBadge />
+                        <local:ButtonBadge />
+                    </StackLayout>
+
+                    <StackLayout BackgroundColor="White">
+                        <StackLayout Padding="10,15,10,0" Orientation="Horizontal">
+                            <controls:CircleImage Aspect="AspectFill" Source="http://lorempixel.com/100/100/people/" />
+                            <Frame BorderColor="#cdd1d6" CornerRadius="50">
+                                <Entry FontSize="Small" Placeholder="No que você está pensando" />
+                            </Frame>
+                        </StackLayout>
+                        <Grid Padding="10,5" ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="1" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="1" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Style="{StaticResource style}">
+                                <Image Source="photo.png" />
+                                <Label
+                                    Margin="0,5,0,0"
+                                    Text="Foto"
+                                    TextColor="#a3ce71" />
+                            </StackLayout>
+                            <BoxView Grid.Column="1" BackgroundColor="#d9dce0" />
+                            <StackLayout Grid.Column="2" Style="{StaticResource style}">
+                                <Image Source="pincheckin.png" />
+                                <Label
+                                    Margin="0,5,0,0"
+                                    Text="Check-in"
+                                    TextColor="#f35369" />
+                            </StackLayout>
+                            <BoxView Grid.Column="3" BackgroundColor="#d9dce0" />
+                            <StackLayout Grid.Column="4" Style="{StaticResource style}">
+                                <Image Source="more.png" />
+                                <Label Text="Mais" TextColor="#4267b2" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ListView.Header>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
