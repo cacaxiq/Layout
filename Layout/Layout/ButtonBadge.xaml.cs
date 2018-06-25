@@ -69,6 +69,29 @@ namespace Layout
         }
         #endregion
 
+        #region IsSelected
+        public static readonly BindableProperty ImageProperty = BindableProperty.Create("Imagem", typeof(string), typeof(ButtonBadge), string.Empty, BindingMode.Default, null, ImagePropertyChanged);
+
+        private static void ImagePropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            if (bindable == null || string.IsNullOrEmpty((string)newValue))
+                return;
+
+            var button = ((ButtonBadge)bindable).button;
+            var c = new FileImageSource
+            {
+                File = (string)newValue
+            };
+            button.Image = c;
+        }
+
+        public string Imagem
+        {
+            get { return (string)GetValue(ImageProperty); }
+            set { SetValue(ImageProperty, value); }
+        }
+        #endregion
+
         public ButtonBadge()
         {
             InitializeComponent();

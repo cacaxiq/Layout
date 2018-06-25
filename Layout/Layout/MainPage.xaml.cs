@@ -7,6 +7,7 @@ namespace Layout
 		public MainPage()
 		{
 			InitializeComponent();
+            listView.ItemsSource = GeradorFeed.ListaFeed();
 		}
 	}
 }

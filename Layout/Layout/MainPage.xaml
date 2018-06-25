@@ -18,18 +18,21 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ListView>
+        <ListView
+            x:Name="listView"
+            HasUnevenRows="true"
+            ItemTemplate="{local:FeedTemplate}"
+            SeparatorVisibility="None">
             <ListView.Header>
-                <StackLayout Spacing="10">
+                <StackLayout>
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <local:ButtonBadge IsSelected="true" />
-                        <local:ButtonBadge />
-                        <local:ButtonBadge />
-                        <local:ButtonBadge Badge="50" />
-                        <local:ButtonBadge />
-                        <local:ButtonBadge />
+                        <local:ButtonBadge Imagem="feed.png" IsSelected="true" />
+                        <local:ButtonBadge Imagem="users.png" />
+                        <local:ButtonBadge Imagem="messenger.png"/>
+                        <local:ButtonBadge Badge="50" Imagem="notifications.png" />
+                        <local:ButtonBadge Imagem="search.png"/>
+                        <local:ButtonBadge Imagem="hambuguer.png"/>
                     </StackLayout>
-
                     <StackLayout BackgroundColor="White">
                         <StackLayout Padding="10,15,10,0" Orientation="Horizontal">
                             <controls:CircleImage Aspect="AspectFill" Source="http://lorempixel.com/100/100/people/" />
@@ -67,6 +70,7 @@
                             </StackLayout>
                         </Grid>
                     </StackLayout>
+                    <BoxView BackgroundColor="#dddfe2" HeightRequest="5" />
                 </StackLayout>
             </ListView.Header>
         </ListView>
