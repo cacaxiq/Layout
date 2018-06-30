@@ -15,7 +15,7 @@ namespace Layout
         public FeedTemplate()
         {
             _simpleFeed = new DataTemplate(typeof(FBCell));
-            _photoFeed = new DataTemplate(typeof(FBCell));
+            _photoFeed = new DataTemplate(typeof(FBImageCell));
         }
 
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)

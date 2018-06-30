@@ -16,6 +16,43 @@ namespace Layout
             var count = random.Next(30);
             for (int i = 0; i < count; i++)
             {
+                if(random.NextDouble() >= 0.5) {
+                    lista.Add(new Feed
+                    {
+                        Users = Users(),
+                        LikesCount = Likes(),
+                        Audience = random.NextDouble() >= 0.5 ? "friends.png" : "world.png",
+                        PostBody = LipsumGenerator.GenerateHtml(1),
+                        PostTime = random.Next(5, 59).ToString(),
+                        SharedsCount = random.Next(100).ToString(),
+                        PostCount = random.Next(200).ToString(),
+                        IsAngryLike = random.NextDouble() >= 0.5,
+                        IsCoolLike = random.NextDouble() >= 0.5,
+                        IsCryLike = random.NextDouble() >= 0.5,
+                        IsHeart = random.NextDouble() >= 0.5,
+                        IsKkkLike = random.NextDouble() >= 0.5,
+                        IsOhLike = random.NextDouble() >= 0.5,
+                    });
+                } else {
+                    lista.Add(new FeedWithImage
+                    {
+                        Users = Users(),
+                        LikesCount = Likes(),
+                        Audience = random.NextDouble() >= 0.5 ? "friends.png" : "world.png",
+                        PostBody = LipsumGenerator.GenerateHtml(1),
+                        PostTime = random.Next(5, 59).ToString(),
+                        SharedsCount = random.Next(100).ToString(),
+                        PostCount = random.Next(200).ToString(),
+                        IsAngryLike = random.NextDouble() >= 0.5,
+                        IsCoolLike = random.NextDouble() >= 0.5,
+                        IsCryLike = random.NextDouble() >= 0.5,
+                        IsHeart = random.NextDouble() >= 0.5,
+                        IsKkkLike = random.NextDouble() >= 0.5,
+                        IsOhLike = random.NextDouble() >= 0.5,
+                    });
+                }
+
+
                 lista.Add(new Feed
                 {
                     Users = Users(),

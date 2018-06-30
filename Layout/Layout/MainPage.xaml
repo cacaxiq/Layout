@@ -28,10 +28,10 @@
                     <StackLayout Orientation="Horizontal" Spacing="0">
                         <local:ButtonBadge Imagem="feed.png" IsSelected="true" />
                         <local:ButtonBadge Imagem="users.png" />
-                        <local:ButtonBadge Imagem="messenger.png"/>
+                        <local:ButtonBadge Imagem="messenger.png" />
                         <local:ButtonBadge Badge="50" Imagem="notifications.png" />
-                        <local:ButtonBadge Imagem="search.png"/>
-                        <local:ButtonBadge Imagem="hambuguer.png"/>
+                        <local:ButtonBadge Imagem="search.png" />
+                        <local:ButtonBadge Imagem="hambuguer.png" />
                     </StackLayout>
                     <StackLayout BackgroundColor="White">
                         <StackLayout Padding="10,15,10,0" Orientation="Horizontal">
@@ -70,7 +70,75 @@
                             </StackLayout>
                         </Grid>
                     </StackLayout>
-                    <BoxView BackgroundColor="#dddfe2" HeightRequest="5" />
+                    <BoxView BackgroundColor="#dddfe2" HeightRequest="4" />
+                    <StackLayout
+                        Padding="10"
+                        BackgroundColor="White"
+                        Orientation="Horizontal">
+                        <ScrollView Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" Spacing="20">
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <controls:CircleImage
+                                        Aspect="AspectFill"
+                                        BorderColor="#4a86e8"
+                                        BorderThickness="3"
+                                        Source="http://lorempixel.com/100/100/people/" />
+                                    <Label Text="Alguem" />
+                                </StackLayout>
+
+
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                    <BoxView BackgroundColor="#dddfe2" HeightRequest="4" />
                 </StackLayout>
             </ListView.Header>
         </ListView>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    x:Class="Layout.Cell.FBImageCell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <StackLayout Padding="8,3" BackgroundColor="White">
+        <Grid ColumnSpacing="10" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <controls:CircleImage
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Aspect="AspectFill"
+                Source="http://lorempixel.com/100/100/people/" />
+            <Label
+                Grid.Row="0"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                LineBreakMode="WordWrap"
+                Text="{Binding Users}"
+                TextColor="#262a31" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="{Binding LinkImage}" />
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="1"
+                Orientation="Horizontal"
+                Spacing="10"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    FontSize="Micro"
+                    Text="{Binding PostTime, StringFormat='{0} min'}"
+                    TextColor="#b3b6bb" />
+                <Image
+                    Aspect="Fill"
+                    HeightRequest="15"
+                    Source="{Binding Audience}"
+                    WidthRequest="15" />
+            </StackLayout>
+            <Label
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                FontAttributes="Bold"
+                Text="..." />
+        </Grid>
+        <Label Text="{Binding PostBody}" TextColor="#3d3d3d" />
+        <FlexLayout JustifyContent="SpaceBetween" Wrap="wrap">
+            <StackLayout
+                FlexLayout.AlignSelf="Start"
+                Orientation="Horizontal"
+                Spacing="0">
+                <Image IsVisible="{Binding IsCoolLike}" Source="coolLike.png" />
+                <Image IsVisible="{Binding IsHeart}" Source="heart.png" />
+                <Image IsVisible="{Binding IsKkkLike}" Source="kkkLike.png" />
+                <Image IsVisible="{Binding IsOhLike}" Source="ohLike.png" />
+                <Image IsVisible="{Binding IsCryLike}" Source="cryLike.png" />
+                <Image IsVisible="{Binding IsAngryLike}" Source="angryLike.png" />
+                <Label
+                    Margin="5,0"
+                    Text="{Binding LikesCount}"
+                    TextColor="#969a9f"
+                    VerticalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout FlexLayout.AlignSelf="End" Orientation="Horizontal">
+                <Label Text="{Binding PostCount, StringFormat='{0} comentários'}" TextColor="#969a9f" />
+                <Label Text="{Binding SharedsCount, StringFormat='{0} compartilhamentos'}" TextColor="#969a9f" />
+            </StackLayout>
+        </FlexLayout>
+        <BoxView BackgroundColor="#ced0d4" HeightRequest="2" />
+        <StackLayout Padding="8,6" Orientation="Horizontal">
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="StartAndExpand"
+                Text="Curtir "
+                TextColor="#6a6f78" />
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"
+                Text="Comentar"
+                TextColor="#6a6f78" />
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="EndAndExpand"
+                Text="Compartilhar"
+                TextColor="#6a6f78" />
+        </StackLayout>
+        <BoxView
+            Margin="-10,0"
+            BackgroundColor="#dddfe2"
+            HeightRequest="5" />
+    </StackLayout>
+</ViewCell>
